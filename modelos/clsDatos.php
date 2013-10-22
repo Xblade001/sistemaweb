@@ -8,7 +8,7 @@ class clsDatos {
         $servidor = "localhost";
         $usuario = "root";
         $clave = "Camaleon";
-        $base = "dbmvc";
+        $base = "poodb";
 
         $this->conexion = mysql_connect($servidor, $usuario, $clave);
         mysql_select_db($base, $this->conexion);
