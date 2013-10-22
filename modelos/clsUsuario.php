@@ -79,7 +79,7 @@ class clsUsuario {
 
     public function eliminar() {
         $objDatos = new clsDatos();
-        $sql = "delete from usurio where(usu_codigo='$this->codigo')";
+        $sql = "delete from usuario where(usu_codigo='$this->codigo')";
         $objDatos->ejecutar($sql);
         $objDatos->cerrarconexion();
     }
