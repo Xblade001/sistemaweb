@@ -27,7 +27,7 @@ class clsPais {
     public function buscar() {
         $encontro = false;
         $objDatos = new clsDatos();
-        $sql = "select * from pais where(pais_codigo='$this->codigo')";
+        $sql = "select * from pais where pais_codigo='$this->codigo'";
         $datos_desordenados = $objDatos->filtro($sql);
 
         if ($columna == $objDatos->proximo($datos_desordenados)) {
