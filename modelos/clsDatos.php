@@ -7,7 +7,7 @@ class clsDatos {
     public function __construct() {
         $servidor = "localhost";
         $usuario = "root";
-        $clave = "Camaleon";
+        $clave = "gta666666";
         $base = "dbmvc";
 
         $this->conexion = mysql_connect($servidor, $usuario, $clave);
