@@ -48,7 +48,7 @@ class clsUsuario {
         $sql = "select * from usuario where(usu_cod='$this->codigo')";
         $datos_desordenados = $objDatos->filtro($sql);
 
-        if ($columna == $objDatos->proximo($datos_desordenados)) {
+        if ($columna = $objDatos->proximo($datos_desordenados)) {
 
             $this->codigo = $columna['usu_cod'];
             $this->login = $columna['usu_login'];

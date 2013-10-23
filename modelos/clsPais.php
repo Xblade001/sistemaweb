@@ -30,7 +30,7 @@ class clsPais {
         $sql = "select * from pais where pais_codigo='$this->codigo'";
         $datos_desordenados = $objDatos->filtro($sql);
 
-        if ($columna == $objDatos->proximo($datos_desordenados)) {
+        if ($columna = $objDatos->proximo($datos_desordenados)) {
 
             $this->codigo = $columna['pais_codigo'];
             $this->descripcion = $columna['pais_descrip'];
