@@ -7,8 +7,8 @@ class clsDatos {
     public function __construct() {
         $servidor = "localhost";
         $usuario = "root";
-        $clave = "gta666666";
-        $base = "dbmvc";
+        $clave = "Camaleon";
+        $base = "poodb";
 
         $this->conexion = mysql_connect($servidor, $usuario, $clave);
         mysql_select_db($base, $this->conexion);
