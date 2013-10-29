@@ -43,7 +43,7 @@ class clsPais {
 
     public function incluir() {
         $objDatos = new clsDatos();
-        $sql = "insert into pais(pais_cod,pais_descrip) 
+        $sql = "insert into pais(pais_codigo,pais_descrip) 
         values ('$this->codigo','$this->descripcion')";
         $objDatos->ejecutar($sql);
         $objDatos->cerrarconexion();
