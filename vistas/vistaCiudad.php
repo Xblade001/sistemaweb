@@ -75,6 +75,7 @@ if ($operacion == 'buscar' && $listo == 1) {
                                     <td><input type='button' name='btneliminar' onclick='Eliminar();' disabled value='Eliminar' /></td>
                                     <td><input type='button' name='btnguardar' onclick='Guardar();' disabled value='Guardar' /></td>
                                     <td><input type='button' name='btncancelar' onclick='Cancelar();' disabled value='Cancelar' /></td>
+                                    <td><input type="button" value="Reporte" onclick="window.open('../reportes/reportCiudad.php')"/></td>
                                 </tr>
                             </table>
                         </form>
