@@ -45,12 +45,12 @@ class clsUsuario {
     public function buscar() {
         $encontro = false;
         $objDatos = new clsDatos();
-        $sql = "select * from usuario where(usu_cod='$this->codigo')";
+        $sql = "select * from usuario where usu_codigo='$this->codigo'";
         $datos_desordenados = $objDatos->filtro($sql);
 
         if ($columna = $objDatos->proximo($datos_desordenados)) {
 
-            $this->codigo = $columna['usu_cod'];
+            $this->codigo = $columna['usu_codigo'];
             $this->login = $columna['usu_login'];
             $this->nombre = $columna['usu_nombre'];
             $this->apellido = $columna['usu_apellido'];
@@ -64,7 +64,7 @@ class clsUsuario {
 
     public function incluir() {
         $objDatos = new clsDatos();
-        $sql = "insert into usuario(usu_cod,usu_login,usu_nombre,usu_apellido,usu_password) 
+        $sql = "insert into usuario(usu_codigo,usu_login,usu_nombre,usu_apellido,usu_password) 
         values ('$this->codigo','$this->login','$this->nombre','$this->apellido','$this->pass')";
         $objDatos->ejecutar($sql);
         $objDatos->cerrarconexion();
@@ -72,14 +72,14 @@ class clsUsuario {
 
     public function modificar() {
         $objDatos = new clsDatos();
-        $sql = "update usuario set usu_login='$this->login', usu_nombre='$this->nombre', usu_apellido='$this->apellido', usu_password='$this->pass'' where(usu_codigo='$this->codigo')";
+        $sql = "update usuario set usu_login='$this->login', usu_nombre='$this->nombre', usu_apellido='$this->apellido', usu_password='$this->pass'' where usu_codigo='$this->codigo'";
         $objDatos->ejecutar($sql);
         $objDatos->cerrarconexion();
     }
 
     public function eliminar() {
         $objDatos = new clsDatos();
-        $sql = "delete from usuario where(usu_codigo='$this->codigo')";
+        $sql = "delete from usuario where usu_codigo='$this->codigo'";
         $objDatos->ejecutar($sql);
         $objDatos->cerrarconexion();
     }

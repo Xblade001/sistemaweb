@@ -7,6 +7,7 @@ var f = document.form1;
 //campos		
 f[0].disabled = false;
 f[1].disabled = false;
+f[2].disabled = false;
 f[0].focus();
 
 //botones	

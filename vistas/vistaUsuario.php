@@ -24,7 +24,7 @@ if ($operacion == 'buscar' && $listo == 1) {
             {
                 var operacion = '<? print($operacion); ?>';
                 var listo = '<? print($listo); ?>';
-                mensajes(operacion,listo);
+                mensajes(operacion, listo);
             }
             window.onload = cargar;
         </script>
@@ -61,7 +61,7 @@ if ($operacion == 'buscar' && $listo == 1) {
                                 </tr>
                                 <tr>
                                     <td align='right'>Password:</td>
-                                    <td><input type='text' disabled name='txtpassword' value='<?php print($lcPassword); ?>' /></td>
+                                    <td><input type='password' disabled name='txtpassword' value='<?php print($lcPassword); ?>' /></td>
                                 </tr>
                                 <input type='hidden' name='txtoperacion' value='des'></td>
                             </table>
@@ -74,6 +74,7 @@ if ($operacion == 'buscar' && $listo == 1) {
                                     <td><input type='button' name='btneliminar' onclick='Eliminar();' disabled value='Eliminar' /></td>
                                     <td><input type='button' name='btnguardar' onclick='Guardar();' disabled value='Guardar' /></td>
                                     <td><input type='button' name='btncancelar' onclick='Cancelar();' disabled value='Cancelar' /></td>
+                                    <td><input type="button" value="Reporte" onclick="window.open('../reportes/reportUsuario.php')"/></td>
                                 </tr>
                             </table>
                         </form>
