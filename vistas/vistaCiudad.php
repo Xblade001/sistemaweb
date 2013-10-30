@@ -2,7 +2,7 @@
 require_once ("../modelos/clsDatos.php");
 $cboPais = new clsDatos();
 $sql = "select * from pais order by pais_codigo";
-$resultado = $cboPais ->filtro($sql);
+$resultado = $cboPais->filtro($sql);
 
 $operacion = $_GET['lcOperacion'];
 $listo = $_GET['lcListo'];
@@ -26,7 +26,7 @@ if ($operacion == 'buscar' && $listo == 1) {
             {
                 var operacion = '<? print($operacion); ?>';
                 var listo = '<? print($listo); ?>';
-                mensajes(operacion,listo);
+                mensajes(operacion, listo);
             }
             window.onload = cargar;
         </script>
@@ -53,17 +53,15 @@ if ($operacion == 'buscar' && $listo == 1) {
                                     <td align='right'>Descripcion:</td>
                                     <td><input type='text' disabled name='txtdescrip' value='<?php print($lcDescrip); ?>' /></td>
                                 </tr>
-                                 <tr>
+                                <tr>
                                     <td align='right'>Pais:</td>
                                     <td><select name ='cbo_Pais' disabled ='cbo_Pais'>
-                                    <?php
-                                    while($columna = $objPais->proximo($resultado)){
-                                        echo '<option value=' .$columna(pais_codigo).'>'.$columna(pais_descrip)'/></option>';
-                                        
-                                    }
-                                    ?>
-                                            
-                                    </select>
+                                            <?php
+                                            while ($columna = $cboPais->proximo($resultado)) {
+                                                echo '<option value=' . $columna['pais_codigo'] . '/>' . $columna['pais_descrip'] . '</option>';
+                                            }
+                                            ?>
+                                        </select>
                                     </td>
                                 </tr>
                                 <input type='hidden' name='txtoperacion' value='des'></td>
