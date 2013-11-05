@@ -18,6 +18,7 @@ $resultado = $reporte->filtro($sql);
                     <tr>
                         <th>Codigo</th>
                         <th>Descripción</th>
+                        <th>Ciudad</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,6 +31,9 @@ $resultado = $reporte->filtro($sql);
                             </td>
                             <td>
                                 <?php echo $columna['bar_descrip'] ?>
+                            </td> 
+                            <td>
+                                <?php echo $columna['ciud_codigo'] ?>
                             </td> 
                         </tr>
                     <?php } ?> 

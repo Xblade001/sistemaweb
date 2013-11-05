@@ -6,10 +6,12 @@ class clsBarrio {
 
     private $codigo;
     private $descripcion;
+    private $ciudad;
 
-    public function __construct($codigo, $descripcion) {
+    public function __construct($codigo, $descripcion, $ciudad) {
         $this->codigo = $codigo;
         $this->descripcion = $descripcion;
+        $this->ciudad = $ciudad;
     }
 
     public function __destruct() {
@@ -23,7 +25,10 @@ class clsBarrio {
     public function get_descripcion() {
         return $this->descripcion;
     }
-
+    
+    public function get_ciudad() {
+        return $this->ciudad;
+    }
     public function buscar() {
         $encontro = false;
         $objDatos = new clsDatos();
@@ -34,6 +39,7 @@ class clsBarrio {
 
             $this->codigo = $columna['bar_codigo'];
             $this->descripcion = $columna['bar_descrip'];
+            $this->ciudad = $columna['ciud_codigo'];
             $encontro = true;
         }
         $objDatos->cerrarfiltro($datos_desordenados);
@@ -44,7 +50,7 @@ class clsBarrio {
     public function incluir() {
         $objDatos = new clsDatos();
         $sql = "insert into barrio(bar_codigo,bar_descrip) 
-        values ('$this->codigo','$this->descripcion')";
+        values ('$this->codigo','$this->descripcion','$this->ciudad')";
         $objDatos->ejecutar($sql);
         $objDatos->cerrarconexion();
     }
