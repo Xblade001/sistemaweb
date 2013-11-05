@@ -6,10 +6,12 @@ class clsCiudad {
 
     private $codigo;
     private $descripcion;
+    private $pais;
 
-    public function __construct($codigo, $descripcion) {
+    public function __construct($codigo, $descripcion, $pais) {
         $this->codigo = $codigo;
         $this->descripcion = $descripcion;
+        $this->pais = $pais;
     }
 
     public function __destruct() {
@@ -24,6 +26,10 @@ class clsCiudad {
         return $this->descripcion;
     }
 
+    public function get_pais() {
+        return $this->pais;
+    }
+
     public function buscar() {
         $encontro = false;
         $objDatos = new clsDatos();
@@ -34,6 +40,7 @@ class clsCiudad {
 
             $this->codigo = $columna['ciud_codigo'];
             $this->descripcion = $columna['ciud_descrip'];
+            $this->pais = $columna['pais_codigo'];
             $encontro = true;
         }
         $objDatos->cerrarfiltro($datos_desordenados);
@@ -43,8 +50,8 @@ class clsCiudad {
 
     public function incluir() {
         $objDatos = new clsDatos();
-        $sql = "insert into ciudad(ciud_codigo,ciud_descrip) 
-        values ('$this->codigo','$this->descripcion')";
+        $sql = "insert into ciudad(ciud_codigo,ciud_descrip,pais_codigo) 
+        values ('$this->codigo','$this->descripcion','$this->pais')";
         $objDatos->ejecutar($sql);
         $objDatos->cerrarconexion();
     }

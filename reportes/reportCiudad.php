@@ -3,6 +3,8 @@ require_once("../modelos/clsDatos.php");
 $reporte = new clsDatos();
 $sql = "select * from ciudad order by ciud_codigo";
 $resultado = $reporte->filtro($sql);
+
+$cboPais = new clsDatos();
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,6 +20,7 @@ $resultado = $reporte->filtro($sql);
                     <tr>
                         <th>Codigo</th>
                         <th>Descripción</th>
+                        <th>Pais</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,6 +34,15 @@ $resultado = $reporte->filtro($sql);
                             <td>
                                 <?php echo $columna['ciud_descrip'] ?>
                             </td> 
+                            <td>
+                                <?php
+                                $p = $columna['pais_codigo'];
+                                $sql2 = "select * from pais where pais_codigo='$p'";
+                                $resultado2 = $cboPais->filtro($sql2);
+                                $columna2 = $cboPais->proximo($resultado2);
+                                echo $columna2['pais_descrip'];
+                                ?>
+                            </td>
                         </tr>
                     <?php } ?> 
                 </tbody>
