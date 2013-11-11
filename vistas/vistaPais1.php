@@ -13,17 +13,17 @@ if ($operacion == 'buscar' && $listo == 1) {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link href="../css/estilos.css" rel="stylesheet" type="text/css" />
         <link href="../css/datepickercontrol.css" rel="stylesheet" type="text/css" />
-        <title>Alta de Pais</title>
+        <title>Alta Pais</title>
         <script src='../js/validacionPais.js'></script>
-        <script>           
+        <script src='../js/datepickercontrol.js'></script>
+        <script>
             function cargar()
             {
                 var operacion = '<? print($operacion); ?>';
                 var listo = '<? print($listo); ?>';
-                mensajes(operacion,listo);
+                mensajes(operacion, listo);
             }
-            window.onload = cargar;          
-            
+            window.onload = cargar;
         </script>
     </head>
     <body>
@@ -36,40 +36,39 @@ if ($operacion == 'buscar' && $listo == 1) {
             </div>
             <div id="contenido">
                 <div id="cuadro">
-                    <h1>Alta de Pais</h1>
+                    <h1>Alta Pais</h1>
                     <div id="texto">
                         <form name='form1' method='post' action='../controladores/corPais.php'>
                             <table border='1' align='center'>
                                 <tr>
                                     <td align='right'>Codigo:</td>
-                                    <td><input type='text' disabled="txtcodigo" name='txtcodigo' onBlur='perderfocus();'  value='<?php echo($lcCodigo); ?>'/></td>
-                                </tr> 
+                                    <td><input type='text' disabled name='txtcodigo' onBlur="perderfocus();" value='<?php print($lcCodigo); ?>'/></td>
+                                </tr>
                                 <tr>
-                                    <td align='right'>Descripción:</td>
-                                    <td><input type='text' disabled ="txtDescrip" name='txtDescrip' value='<?php echo($lcDescrip); ?>'/></td>
-                                </tr>                                
-                                <td><input type='hidden' name='txtoperacion' value='des'/></td>                            
+                                    <td align='right'>Descripcion:</td>
+                                    <td><input type='text' disabled name='txtdescrip' value='<?php print($lcDescrip); ?>' /></td>
+                                </tr>
+                                <input type='hidden' name='txtoperacion' value='des'></td>
                             </table>
-                            <br> </br>
+
                             <table border='1' align='center'>
                                 <tr>
                                     <td><input type='button' name='btnincluir' onclick='Incluir();' value='Incluir' /></td>
                                     <td><input type='button' name='btnbuscar' onclick='Buscar();' value='Buscar' /></td>
-                                    <td><input type='button' name='btnmodificar' onclick='Modificar();' disabled="" value='Modificar' /></td>
-                                    <td><input type='button' name='btneliminar' onclick='Eliminar();' disabled="" value='Eliminar' /></td>
-                                    <td><input type='button' name='btnguardar' onclick='Guardar();' disabled="" value='Guardar' /></td>
-                                    <td><input type='button' name='btncancelar' onclick='Cancelar();' disabled="" value='Cancelar' /></td>
-                                    <td><input type="button" value="Reporte" onclick="window.open('../reportes/repotPais.php')"/></td>
+                                    <td><input type='button' name='btnmodificar' onclick='Modificar();' disabled value='Modificar' /></td>
+                                    <td><input type='button' name='btneliminar' onclick='Eliminar();' disabled value='Eliminar' /></td>
+                                    <td><input type='button' name='btnguardar' onclick='Guardar();' disabled value='Guardar' /></td>
+                                    <td><input type='button' name='btncancelar' onclick='Cancelar();' disabled value='Cancelar' /></td>
+                                    <td><input type="button" value="Reporte" onclick="window.open('../reportes/reportPais.php')"/></td>
                                 </tr>
                             </table>
                         </form>
+
                     </div>
                 </div>
             </div>
         </div>
         <div id="pie">
         </div>
-
-
     </body>
 </html>
