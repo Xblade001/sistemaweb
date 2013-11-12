@@ -1,0 +1,272 @@
+@import "reset.css";
+
+body{
+    background:url(../img/fondo.png);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration:none;
+}
+
+#contenedor{
+    width:800px;
+    height:auto;
+    margin: 5px auto 10px auto;
+    border:2px solid #cacaca;
+    background:#fdfdfd;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    overflow:hidden;
+}
+
+#contenedorEst{
+    width:800px;
+    height:auto;
+    margin: 5px auto 10px auto;
+    border:2px solid #cacaca;
+    background:#fdfdfd;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    overflow:hidden;
+}
+
+
+#cintillo{
+    width:800px;
+    height:65px;
+    background:url(../img/header_cintillos.jpg) top center no-repeat;	
+}
+
+#banner{
+    width:800px;
+    height:91px;
+    background:url(../img/banner_infocentro.jpg) top center no-repeat;
+}
+
+
+
+#menu{
+    width:200px;
+    height:500px;
+    float:left;
+    background:#f6f7f9;
+    border-right:1px solid #cacaca;
+    padding-top:5px;
+}
+
+#menu a{
+    display:block;
+    text-decoration:none;
+    color:#FFF;
+    font-weight:bold;
+    background:url(../img/menu9.gif) left top no-repeat;
+    padding:9px 0 9px 0;
+    text-indent:30px;
+    font-size:14px;
+    width:200px;
+}
+
+
+
+
+#menu a:hover{
+    background:url(../img/menu9.gif) 0 -32px no-repeat;	
+}
+
+
+#contenido{
+    background:white;
+    width:570px;
+    height:auto;
+    float:left;
+    margin:5px 0 0 20px;
+}
+
+
+#dialogo{
+    display:none;
+    height:auto;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    padding:7px;
+    overflow:hidden;
+    margin-bottom:10px;
+
+}
+
+#dialogo a{
+    float:right;
+    display:block;
+    width:10px;
+    text-decoration:none;
+    color:#000;
+    font-size:14px;
+}
+
+#cuadro{
+    display:block;
+    height:auto;
+    overflow:hidden;
+    border:5px solid #427192;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 5px 5px 0 #000;
+    -webkit-box-shadow: 5px 5px 0 #000;
+    -moz-box-shadow: 5px 5px 0 #000;
+}
+
+#cuadro h1{
+    display:block;
+    background:url(../img/fondo_titulo.png) left top repeat-x;
+    padding:8px 0 8px 0;
+    border-bottom:1px solid #dde8f0;
+    text-indent:20px;
+    color:#225983;
+    font-weight:bold;
+}
+
+#cuadro2{
+    display:block;
+    height:auto;
+    overflow:hidden;
+}
+
+#cuadro2 h1{
+    display:block;
+    padding:8px 0 8px 0;
+    text-indent:8px;
+    color:#225983;
+    font-weight:bold;
+}
+
+
+#cuadro2 p{
+    float:left;
+    display:block;
+    text-align:justify;
+    width:400px;
+}
+
+
+
+#texto{
+    width:540px;
+    height:auto;
+    margin:5px auto 5px auto;
+    overflow:hidden;
+    padding:10px;
+    color:#5e5e5e;
+    font-size:15px;		
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+
+.separador{
+    margin-top:30px;	
+}
+
+.izquiera{
+    float:left;
+    width:140px;
+    height:110px;	
+    margin-right:10px;
+    border:2px solid #225983;
+}
+
+
+#pie{
+    width:610px;
+    height:40px;
+    margin:0 auto 20px auto;
+    background:url(../img/bg_footer_.png) no-repeat;	
+}
+
+#pie p{
+    font-size:11px;
+    position:relative;
+    top:16px;
+    left:8px;
+    font-weight:bold;	
+}
+
+.campos{
+    padding:5px;
+    width:300px;	
+}
+
+.listas{	
+    padding:5px;
+}
+
+.tabla{
+    margin:0 auto 5px auto;
+}
+
+
+.datostabla{
+    margin:20px auto 5px auto;
+
+}
+
+.datostabla td{
+    border:1px solid #999;
+    padding:5px;	
+}
+
+
+.mensajeError{
+    display:block;
+    padding:4px;
+    background:#ff8d7a;
+    border:1px solid #9c3c25;
+    font-size:11px;
+    font-weight:bold;	
+}
+
+.datos{
+    font-size:11px;
+}
+
+.datos td{
+    border:1px solid #CCC;	
+}
+
+.hover:hover{
+    width:18px;
+    height:18px;	
+}
+
+
+#listaErrores{
+    width:1050px;
+    height:auto;
+    position:absolute, fixed;
+    top:30%;
+    left:10%;
+    background:white;
+    border:2px solid red;
+    display:none;
+    padding:5px;
+    overflow:hidden;
+}
+
+
+#listaErrores table{
+    border:2px solid red;
+    margin:10px auto;
+    padding:5px;
+}
+
+#listaErrores td{
+    border:2px solid red;
+    margin:10px auto;
+    padding:5px;
+}
+
+#MensajeError{
+    float:right;
+    font-size:14px;
+    color:#000;
+    font-weight:bold;
+}
