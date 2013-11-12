@@ -45,23 +45,23 @@ if ($operacion == 'buscar' && $listo == 1) {
                             <table border='1' align='center'>
                                 <tr>
                                     <td align='right'>Codigo:</td>
-                                    <td><input type='text' disabled name='txtcodigo' onBlur="perderfocus();" value='<?php print($lcCodigo); ?>'/></td>
+                                    <td><input type='text' disabled='txtcodigo' name='txtcodigo' onBlur="perderfocus();" value='<?php print($lcCodigo); ?>'/></td>
                                 </tr>
                                 <tr>
                                     <td align='right'>Login:</td>
-                                    <td><input type='text' disabled name='txtlogin' value='<?php print($lcLogin); ?>' /></td>
+                                    <td><input type='text' disabled='txtlogin' name='txtlogin' value='<?php print($lcLogin); ?>' /></td>
                                 </tr>
                                 <tr>
                                     <td align='right'>Nombre:</td>
-                                    <td><input type='text' disabled name='txtnombre' value='<?php print($lcNombre); ?>' /></td>
+                                    <td><input type='text' disabled='txtnombre' name='txtnombre' value='<?php print($lcNombre); ?>' /></td>
                                 </tr>
                                 <tr>
                                     <td align='right'>Apellido:</td>
-                                    <td><input type='text' disabled name='txtapellido' value='<?php print($lcApellido); ?>' /></td>
+                                    <td><input type='text' disabled='txtapellido' name='txtapellido' value='<?php print($lcApellido); ?>' /></td>
                                 </tr>
                                 <tr>
                                     <td align='right'>Password:</td>
-                                    <td><input type='password' disabled name='txtpassword' value='<?php print($lcPassword); ?>' /></td>
+                                    <td><input type='password' disabled='txtpassword' name='txtpassword' value='<?php print($lcPassword); ?>' /></td>
                                 </tr>
                                 <input type='hidden' name='txtoperacion' value='des'></td>
                             </table>

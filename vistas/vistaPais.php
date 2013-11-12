@@ -42,11 +42,11 @@ if ($operacion == 'buscar' && $listo == 1) {
                             <table border='1' align='center'>
                                 <tr>
                                     <td align='right'>Codigo:</td>
-                                    <td><input type='text' disabled name='txtcodigo' onBlur="perderfocus();" value='<?php print($lcCodigo); ?>'/></td>
+                                    <td><input type='text' disabled='txtcodigo' name='txtcodigo' onBlur="perderfocus();" value='<?php print($lcCodigo); ?>'/></td>
                                 </tr>
                                 <tr>
                                     <td align='right'>Descripcion:</td>
-                                    <td><input type='text' disabled name='txtdescrip' value='<?php print($lcDescrip); ?>' /></td>
+                                    <td><input type='text' disabled='txtdescrip' name='txtdescrip' value='<?php print($lcDescrip); ?>' /></td>
                                 </tr>
                                 <input type='hidden' name='txtoperacion' value='des'></td>
                             </table>

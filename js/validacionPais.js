@@ -61,7 +61,7 @@ function perderfocus()
 {
 var f = document.form1;
 			
-if(f.txtcodigo  .value=='buscar')
+if(f.txtoperacion.value=='buscar')
 {
     f[0].disabled = false;
     f.submit();
