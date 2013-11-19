@@ -72,7 +72,7 @@ class clsUsuario {
 
     public function modificar() {
         $objDatos = new clsDatos();
-        $sql = "update usuario set usu_login='$this->login', usu_nombre='$this->nombre', usu_apellido='$this->apellido', usu_password='$this->pass'' where usu_codigo='$this->codigo'";
+        $sql = "update usuario set usu_login='$this->login', usu_nombre='$this->nombre', usu_apellido='$this->apellido', usu_password='$this->pass' where usu_codigo='$this->codigo'";
         $objDatos->ejecutar($sql);
         $objDatos->cerrarconexion();
     }

@@ -1,12 +1,4 @@
-<?php
-$operacion = $_GET['lcOperacion'];
-$listo = $_GET['lcListo'];
 
-if ($operacion == 'buscar' && $listo == 1) {
-    $lcCodigo = $_GET['lcCodigo'];
-    $lcDescrip = $_GET['lcDescrip'];
-}
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -27,6 +19,16 @@ if ($operacion == 'buscar' && $listo == 1) {
         </script>
     </head>
     <body>
+        <?php
+        $operacion = $_GET['lcOperacion'];
+        $listo = $_GET['lcListo'];
+
+        if ($operacion == 'buscar' && $listo == 1) {
+            $lcCodigo = $_GET['lcCodigo'];
+            $lcDescrip = $_GET['lcDescrip'];
+            print("<script>function buscar2(){Buscar2();}window.onload = buscar2;</script>");
+        }
+        ?>    
         <div id="contenedorEst">
             <div id="cintillo">
             </div>

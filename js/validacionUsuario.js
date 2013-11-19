@@ -10,6 +10,7 @@ f[1].disabled = false;
 f[2].disabled = false;
 f[3].disabled = false;
 f[4].disabled = false;
+f[0].focus();
 
 
 //botones	
@@ -33,6 +34,7 @@ f[1].disabled = true;
 f[2].disabled = true;
 f[3].disabled = true;
 f[4].disabled = true;
+f[0].focus();
 
 //botones	
 f.txtoperacion.value = 'buscar';
@@ -40,6 +42,26 @@ f.btnincluir.disabled = true;
 f.btnbuscar.disabled = true;
 f.btnmodificar.disabled = true;
 f.btneliminar.disabled = true;
+f.btncancelar.disabled = false;
+f.btnguardar.disabled = true;
+}
+
+function Buscar2(){
+var f = document.form1; 
+		
+//campos		
+f[0].disabled = true;
+f[1].disabled = true;
+f[2].disabled = true;
+f[3].disabled = true;
+f[4].disabled = true;
+
+//botones	
+f.txtoperacion.value = 'buscar';
+f.btnincluir.disabled = true;
+f.btnbuscar.disabled = true;
+f.btnmodificar.disabled = false;
+f.btneliminar.disabled = false;
 f.btncancelar.disabled = false;
 f.btnguardar.disabled = true;
 }
