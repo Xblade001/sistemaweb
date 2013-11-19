@@ -3,6 +3,9 @@ require_once("../modelos/clsDatos.php");
 $reporte = new clsDatos();
 $sql = "select * from barrio order by bar_codigo";
 $resultado = $reporte->filtro($sql);
+
+$cboPais = new clsDatos();
+$cboCiudad = new clsDatos();
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,6 +22,7 @@ $resultado = $reporte->filtro($sql);
                         <th>Codigo</th>
                         <th>Descripción</th>
                         <th>Ciudad</th>
+                        <th>Pais</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,10 +35,25 @@ $resultado = $reporte->filtro($sql);
                             </td>
                             <td>
                                 <?php echo $columna['bar_descrip'] ?>
-                            </td> 
+                            </td>
                             <td>
-                                <?php echo $columna['ciud_codigo'] ?>
-                            </td> 
+                                <?php
+                                $c = $columna['ciud_codigo'];
+                                $sql2 = "select * from ciudad where ciud_codigo='$c'";
+                                $resultado3 = $cboCiudad->filtro($sql2);
+                                $columna3 = $cboCiudad->proximo($resultado3);
+                                echo $columna3['ciud_descrip'];
+                                ?>
+                            </td>
+                            <td>
+                                <?php
+                                $p = $columna3['pais_codigo'];
+                                $sql4 = "select * from pais where pais_codigo='$p'";
+                                $resultado2 = $cboPais->filtro($sql4);
+                                $columna2 = $cboPais->proximo($resultado2);
+                                echo $columna2['pais_descrip'];
+                                ?>
+                            </td>
                         </tr>
                     <?php } ?> 
                 </tbody>

@@ -49,7 +49,7 @@ class clsBarrio {
 
     public function incluir() {
         $objDatos = new clsDatos();
-        $sql = "insert into barrio(bar_codigo,bar_descrip) 
+        $sql = "insert into barrio(bar_codigo,bar_descrip,ciud_codigo) 
         values ('$this->codigo','$this->descripcion','$this->ciudad')";
         $objDatos->ejecutar($sql);
         $objDatos->cerrarconexion();
