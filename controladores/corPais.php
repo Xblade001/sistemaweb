@@ -1,15 +1,10 @@
 <?php
 
 require_once("../modelos/clsPais.php");
-
 $lcCodigo = $_POST['txtcodigo'];
 $lcDescrip = $_POST['txtdescrip'];
-
 $lcOperacion = $_POST["txtoperacion"];
-
 $lobjPais = new clsPais($lcCodigo, $lcDescrip);
-
-
 if ($lcOperacion == "buscar") {
     if ($lobjPais->buscar()) {
         $lcCodigo = $lobjPais->get_codigo();
@@ -25,8 +20,6 @@ location.href=\"../vistas/vistaPais.php?lcOperacion=$lcOperacion&lcListo=$lcList
 </script>";
     }
 }
-
-
 if ($lcOperacion == "incluir") {
     if ($lobjPais->buscar()) {
         $lcListo = 0;
@@ -41,7 +34,6 @@ location.href=\"../vistas/vistaPais.php?lcOperacion=$lcOperacion&lcListo=$lcList
 </script>";
     }
 }
-
 if ($lcOperacion == "modificar") {
     $lobjPais->modificar();
     $lcListo = 1;
@@ -49,7 +41,6 @@ if ($lcOperacion == "modificar") {
 location.href=\"../vistas/vistaPais.php?lcOperacion=$lcOperacion&lcListo=$lcListo\";
 </script>";
 }
-
 if ($lcOperacion == "eliminar") {
     $lobjPais->eliminar();
     $lcListo = 1;

@@ -83,6 +83,7 @@ class clsUsuario {
         $objDatos->ejecutar($sql);
         $objDatos->cerrarconexion();
     }
+
 }
 
 ?>

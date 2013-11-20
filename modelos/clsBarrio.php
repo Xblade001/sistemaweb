@@ -25,10 +25,11 @@ class clsBarrio {
     public function get_descripcion() {
         return $this->descripcion;
     }
-    
+
     public function get_ciudad() {
         return $this->ciudad;
     }
+
     public function buscar() {
         $encontro = false;
         $objDatos = new clsDatos();

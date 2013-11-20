@@ -1,16 +1,11 @@
 <?php
 
 require_once("../modelos/clsBarrio.php");
-
 $lcCodigo = $_POST['txtcodigo'];
 $lcDescrip = $_POST['txtdescrip'];
 $lcCiudad = $_POST['cbo_Ciudad'];
-
 $lcOperacion = $_POST["txtoperacion"];
-
 $lobjBarrio = new clsBarrio($lcCodigo, $lcDescrip, $lcCiudad);
-
-
 if ($lcOperacion == "buscar") {
     if ($lobjBarrio->buscar()) {
         $lcCodigo = $lobjBarrio->get_codigo();
@@ -27,8 +22,6 @@ location.href=\"../vistas/vistaBarrio.php?lcOperacion=$lcOperacion&lcListo=$lcLi
 </script>";
     }
 }
-
-
 if ($lcOperacion == "incluir") {
     if ($lobjBarrio->buscar()) {
         $lcListo = 0;
@@ -43,7 +36,6 @@ location.href=\"../vistas/vistaBarrio.php?lcOperacion=$lcOperacion&lcListo=$lcLi
 </script>";
     }
 }
-
 if ($lcOperacion == "modificar") {
     $lobjBarrio->modificar();
     $lcListo = 1;
@@ -51,7 +43,6 @@ if ($lcOperacion == "modificar") {
 location.href=\"../vistas/vistaBarrio.php?lcOperacion=$lcOperacion&lcListo=$lcListo\";
 </script>";
 }
-
 if ($lcOperacion == "eliminar") {
     $lobjBarrio->eliminar();
     $lcListo = 1;

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -22,7 +21,6 @@
         <?php
         $operacion = $_GET['lcOperacion'];
         $listo = $_GET['lcListo'];
-
         if ($operacion == 'buscar' && $listo == 1) {
             $lcCodigo = $_GET['lcCodigo'];
             $lcDescrip = $_GET['lcDescrip'];
@@ -52,7 +50,6 @@
                                 </tr>
                                 <input type='hidden' name='txtoperacion' value='des'></td>
                             </table>
-
                             <table border='1' align='center'>
                                 <tr>
                                     <td><input type='button' name='btnincluir' onclick='Incluir();' value='Incluir' /></td>
@@ -65,7 +62,6 @@
                                 </tr>
                             </table>
                         </form>
-
                     </div>
                 </div>
             </div>

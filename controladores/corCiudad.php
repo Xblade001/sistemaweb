@@ -1,18 +1,11 @@
 <?php
 
 require_once("../modelos/clsCiudad.php");
-
 $lcCodigo = $_POST['txtcodigo'];
 $lcDescrip = $_POST['txtdescrip'];
 $lcPais = $_POST['cbo_Pais'];
-
-
-
 $lcOperacion = $_POST["txtoperacion"];
-
 $lobjCiudad = new clsCiudad($lcCodigo, $lcDescrip, $lcPais);
-
-
 if ($lcOperacion == "buscar") {
     if ($lobjCiudad->buscar()) {
         $lcCodigo = $lobjCiudad->get_codigo();
@@ -29,8 +22,6 @@ location.href=\"../vistas/vistaCiudad.php?lcOperacion=$lcOperacion&lcListo=$lcLi
 </script>";
     }
 }
-
-
 if ($lcOperacion == "incluir") {
     if ($lobjCiudad->buscar()) {
         $lcListo = 0;
@@ -45,7 +36,6 @@ location.href=\"../vistas/vistaCiudad.php?lcOperacion=$lcOperacion&lcListo=$lcLi
 </script>";
     }
 }
-
 if ($lcOperacion == "modificar") {
     $lobjCiudad->modificar();
     $lcListo = 1;
@@ -53,7 +43,6 @@ if ($lcOperacion == "modificar") {
 location.href=\"../vistas/vistaCiudad.php?lcOperacion=$lcOperacion&lcListo=$lcListo\";
 </script>";
 }
-
 if ($lcOperacion == "eliminar") {
     $lobjCiudad->eliminar();
     $lcListo = 1;

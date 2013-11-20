@@ -3,7 +3,6 @@ require_once("../modelos/clsDatos.php");
 $reporte = new clsDatos();
 $sql = "select * from ciudad order by ciud_codigo";
 $resultado = $reporte->filtro($sql);
-
 $cboPais = new clsDatos();
 ?>
 <!DOCTYPE html>

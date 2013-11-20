@@ -23,10 +23,8 @@
         $cboPais = new clsDatos();
         $sql = "select * from pais order by pais_codigo";
         $resultado = $cboPais->filtro($sql);
-
         $operacion = $_GET['lcOperacion'];
         $listo = $_GET['lcListo'];
-
         if ($operacion == 'buscar' && $listo == 1) {
             $lcCodigo = $_GET['lcCodigo'];
             $lcDescrip = $_GET['lcDescrip'];
@@ -67,7 +65,6 @@
                                 </tr>
                                 <input type='hidden' name='txtoperacion' value='des'></td>
                             </table>
-
                             <table border='1' align='center'>
                                 <tr>
                                     <td><input type='button' name='btnincluir' onclick='Incluir();' value='Incluir' /></td>
@@ -80,7 +77,6 @@
                                 </tr>
                             </table>
                         </form>
-
                     </div>
                 </div>
             </div>

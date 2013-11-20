@@ -3,7 +3,6 @@ require_once("../modelos/clsDatos.php");
 $reporte = new clsDatos();
 $sql = "select * from barrio order by bar_codigo";
 $resultado = $reporte->filtro($sql);
-
 $cboPais = new clsDatos();
 $cboCiudad = new clsDatos();
 ?>

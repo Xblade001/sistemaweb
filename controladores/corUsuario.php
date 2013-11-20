@@ -1,17 +1,13 @@
 <?php
 
 require_once("../modelos/clsUsuario.php");
-
 $lcCodigo = $_POST['txtcodigo'];
 $lcLogin = $_POST['txtlogin'];
 $lcNombre = $_POST['txtnombre'];
 $lcApellido = $_POST['txtapellido'];
 $lcPassword = $_POST['txtpassword'];
 $lcOperacion = $_POST["txtoperacion"];
-
 $lobjUsuario = new clsUsuario($lcCodigo, $lcLogin, $lcNombre, $lcApellido, $lcPassword);
-
-
 if ($lcOperacion == "buscar") {
     if ($lobjUsuario->buscar()) {
         $lcCodigo = $lobjUsuario->get_codigo();
@@ -30,8 +26,6 @@ location.href=\"../vistas/vistaUsuario.php?lcOperacion=$lcOperacion&lcListo=$lcL
 </script>";
     }
 }
-
-
 if ($lcOperacion == "incluir") {
     if ($lobjUsuario->buscar()) {
         $lcListo = 0;
@@ -46,7 +40,6 @@ location.href=\"../vistas/vistaUsuario.php?lcOperacion=$lcOperacion&lcListo=$lcL
 </script>";
     }
 }
-
 if ($lcOperacion == "modificar") {
     $lobjUsuario->modificar();
     $lcListo = 1;
@@ -54,7 +47,6 @@ if ($lcOperacion == "modificar") {
 location.href=\"../vistas/vistaUsuario.php?lcOperacion=$lcOperacion&lcListo=$lcListo\";
 </script>";
 }
-
 if ($lcOperacion == "eliminar") {
     $lobjUsuario->eliminar();
     $lcListo = 1;
