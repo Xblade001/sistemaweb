@@ -3,7 +3,7 @@ function Incluir() {
 //campos		
     f[0].disabled = false;
     f[1].disabled = false;
-    f[0].focus();
+    f[1].focus();
 //botones	
     f.txtoperacion.value = 'incluir';
     f.btnincluir.disabled = true;

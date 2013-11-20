@@ -6,7 +6,7 @@ function Incluir() {
     f[2].disabled = false;
     f[3].disabled = false;
     f[4].disabled = false;
-    f[0].focus();
+    f[1].focus();
 //botones	
     f.txtoperacion.value = 'incluir';
     f.btnincluir.disabled = true;
