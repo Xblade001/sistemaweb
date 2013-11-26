@@ -48,6 +48,8 @@ function Modificar() {
 //campos		
     f[0].disabled = true;
     f[1].disabled = false;
+    f[2].disabled = false;
+    f[1].focus();
 //botones	
     f.txtoperacion.value = 'modificar';
     f.btnincluir.disabled = true;

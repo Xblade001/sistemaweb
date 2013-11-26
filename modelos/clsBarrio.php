@@ -58,7 +58,8 @@ class clsBarrio {
 
     public function modificar() {
         $objDatos = new clsDatos();
-        $sql = "update barrio set bar_descrip='$this->descripcion' where bar_codigo='$this->codigo'";
+        $sql = "update barrio set bar_descrip='$this->descripcion'
+        ,ciud_codigo='$this->ciudad' where bar_codigo='$this->codigo'";
         $objDatos->ejecutar($sql);
         $objDatos->cerrarconexion();
     }

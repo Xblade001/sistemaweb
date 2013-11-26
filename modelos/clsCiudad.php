@@ -58,7 +58,8 @@ class clsCiudad {
 
     public function modificar() {
         $objDatos = new clsDatos();
-        $sql = "update ciudad set ciud_descrip='$this->descripcion' where ciud_codigo='$this->codigo'";
+        $sql = "update ciudad set ciud_descrip='$this->descripcion'
+        ,pais_codigo='$this->pais' where ciud_codigo='$this->codigo'";
         $objDatos->ejecutar($sql);
         $objDatos->cerrarconexion();
     }
